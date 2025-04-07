@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { lexend } from "./font";
-import { Navbar } from "@/components/my-ui/navbar";
+import { Navbar } from "@/components/layout/navbar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,8 +16,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lexend.className} antialiased`}>
-        <Navbar></Navbar>
-        {children}
+        <Navbar />
+        <div className="min-h-screen px-8 py-4">{children}</div>
       </body>
     </html>
   );
